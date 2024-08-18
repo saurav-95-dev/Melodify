@@ -219,9 +219,68 @@ button:disabled {
   color: #f54e3b;
 }
 /* 
+
 .................................................. */
 
 
 
 /* .................................................. */
 
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 100%; /* Ensure the app container doesn't exceed screen width */
+  box-sizing: border-box; /* Ensures padding doesn't push content outside */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  position: relative; /* Keeps content within boundaries */
+}
+.playlist, .recommendations {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-dropdown {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box; /* Keeps padding inside the container */
+}
+
+@media (max-width: 600px) {
+  .playlist, .recommendations {
+    width: 100%;
+    padding: 10px; /* Added padding to avoid content touching the edges */
+  }
+
+  .playlist-dropdown {
+    font-size: 14px; /* Smaller font size for smaller screens */
+  }
+
+  .player {
+    padding-bottom: 20px; /* Additional padding to prevent overlap */
+  }
+}
+.spotify-player {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+.player-controls {
+  overflow-x: auto; /* Ensures controls don't overflow */
+}

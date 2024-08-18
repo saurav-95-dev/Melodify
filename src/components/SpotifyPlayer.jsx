@@ -6,8 +6,8 @@ const SpotifyPlayer = ({ trackUrl }) => {
     <div className="spotify-container">
       <iframe
         src={trackUrl}
-        width="300"
-        height="300"
+        width="250"
+        height="220"
         frameBorder="0"
         allowtransparency="true"
         allow="encrypted-media"
