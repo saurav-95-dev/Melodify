@@ -1,38 +1,227 @@
-.App {
+
+.body{
+  background-color: #252424;
+}
+.app {
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-theme {
+  background-color: #ffe0c7;
+  color: #333;
+  border-radius: 10px;
+  height: 100vh;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark-theme {
+  background-color: #333;
+  color: #f9f9f9;
+  border-radius: 10px;
+  height: 100vh;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.player, .playlist, .recommendations {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.player-controls button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.player-controls button:hover {
+  opacity: 0.8;
+}
+
+.player-controls button:focus {
+  outline: none;
+}
+
+button {
+  background-color: #f94430;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:nth-child(3) {
+  background-color: #28a745;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+button:nth-child(4) {
+  background-color: #25d366; /* WhatsApp color */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.light-theme li {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.dark-theme li {
+  background: #444444;
+  color: #f9f9f9;
+}
+
+li:hover {
+  background: #d0d0d0;
+}
+
+.dark-theme li:hover {
+  background: #666;
+}
+
+@media (max-width: 600px) {
+  .player, .playlist, .recommendations {
+    width: 100%;
   }
 }
+
+.search-bar {
+  width: 40%; /* Make the search bar shorter */
+  padding: 10px;
+  margin: 20px auto; /* Center the search bar */
+  display: block;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Slightly larger border radius */
+}
+
+.theme-toggle {
+  margin-bottom: 20px;
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.theme-toggle button:hover {
+  color: #007bff;
+}
+
+/* .speech-button {
+  width: 160px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+} */
+
+.speech-button{
+  border-radius: 5px;
+  border: none;
+  padding: 4px;
+  background-color: #007bff;
+
+}
+
+
+
+.speech-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(25, 25, 25, 0.3);
+}
+
+.speech-button:active {
+  transform: scale(0.9);
+}
+
+.speech-button:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.playlist-dropdown {
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 16px;
+  border: 1px solid #e6e2e2;
+  border-radius: 8px; /* Slightly larger border radius */
+  background-color: #fff;
+}
+
+.playlist-dropdown:focus {
+  border-color: #007bff; /* Highlight color */
+  outline: none;
+}
+
+.player-controls{
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.song-heading{
+  padding: 1px;
+  padding-top: 1px;
+}
+
+.search-bar-container{
+  padding-top: 1px;
+  
+}
+.toggle{
+  padding-top: 20px;
+}
+
+button:disabled {
+  background-color: #007bff;
+  color: #f1ecec;
+  cursor: not-allowed;
+}
+.player-controls button {
+  visibility: visible;
+}
+
+.player-controls button:disabled {
+  background-color: #3553c0;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.playlist-name{
+  margin-top: -35px ;
+  color: #f54e3b;
+}
+/* 
+.................................................. */
+
+
+
+/* .................................................. */
+
