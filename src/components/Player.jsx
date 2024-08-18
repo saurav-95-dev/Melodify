@@ -1,39 +1,37 @@
-import React from 'react';
-import SpotifyPlayer from './SpotifyPlayer';
+import React, { useEffect, useRef } from 'react';
 
-const Player = ({ song, audioRef, onNext, onPrevious }) => {
-  const isSpotifyLink = song.src.includes('spotify.com');
+const Player = ({ song, onNext, onPrevious }) => {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }, [song]);
+
+  const downloadSong = () => {
+    const link = document.createElement('a');
+    link.href = song.src;
+    link.download = `${song.title}.mp3`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const shareOnWhatsApp = () => {
+    const url = `https://api.whatsapp.com/send?text=Check out this song: ${song.title} - ${song.src}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="player">
-      {isSpotifyLink ? (
-        <div className="spotify-player-container">
-          <SpotifyPlayer trackUrl={song.src} />
-        </div>
-      ) : (
-        <audio ref={audioRef} controls src={song.src} />
-      )}
-
+      <h2 className='song-heading'>Now Playing: {song.title} by {song.artist}</h2>
+      <audio controls src={song.src} ref={audioRef} />
       <div className="player-controls">
         <button onClick={onPrevious}>Previous</button>
         <button onClick={onNext}>Next</button>
-        {isSpotifyLink ? (
-          <>
-            <button onClick={() => alert('Download is not available for Spotify tracks')}>
-              Download Spotify Song
-            </button>
-            <button onClick={() => window.open(song.src, '_blank')}>
-              Open in Spotify
-            </button>
-          </>
-        ) : (
-          <button onClick={() => window.open(song.src, '_blank')}>
-            Download
-          </button>
-        )}
-        <button onClick={() => alert('Sharing is not available for Spotify links')} disabled={isSpotifyLink}>
-          Share
-        </button>
+        <button onClick={downloadSong}>Download</button>
+        <button onClick={shareOnWhatsApp}>Share</button>
       </div>
     </div>
   );
