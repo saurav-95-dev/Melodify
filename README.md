@@ -1,16 +1,21 @@
 
-Melodify:
+## Visit my youtube channel : https://www.youtube.com/@sauravdev4757
+## My Twitter : https://x.com/Saurav_dev21
+## My Linkedin : https://www.linkedin.com/in/saurabh-dev-9120aa236/
 
-->Melodify player with Recommendation engine based on listen history and self suggestion alongwith speech recognition functionality. 
-->Provides a button feature to download and share the song 
-->Light/dark theme feature via React context.
+#### PROJECT :
+#### ACKNOWLEDGEMENTS :
+#### DESCRIPTION :
+#### TECHNOLOGIES :
+HTML , CSS , Javascript
 
-Key Problem solving involved :
+#### CONCEPTS AND BEST PRACTICES :
+Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
 
-->Build with recomendation engine which quickly identifies the list of related song based of watch history plus self sugeesting recommendation.
-->Dark light theme for eye comfort
-->100% responsiveness to fit in screen size.
-->Option to select song either from dropdown list or via voice command.
+#### USAGE :
+#### LICENSE :
+#### CONTACT :
+#### TRY IT -->
 
 Live link : https://main--melodify-saurav.netlify.app/
 
