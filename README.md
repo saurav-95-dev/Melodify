@@ -9,7 +9,7 @@
 #### TECHNOLOGIES :
 HTML , CSS , Javascript
 
-#### CONCEPTS AND BEST PRACTICES :
+#### CONCEPTS AND TECHNIQUES :
 Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
 
 #### USAGE :
