@@ -7,10 +7,10 @@
 #### ACKNOWLEDGEMENTS :
 #### DESCRIPTION :
 #### TECHNOLOGIES :
-HTML , CSS , Javascript
+
 
 #### CONCEPTS AND TECHNIQUES :
-Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
+
 
 #### USAGE :
 #### LICENSE :
